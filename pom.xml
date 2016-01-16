@@ -154,15 +154,15 @@
                 <resources>
                     <resource>
                         <directory>src/main/java</directory>
-                        <filtering>true</filtering>
+                        <!--<filtering>true</filtering>-->
 
                         <!-- Exclude node stuff, Gulp build file, raw theme  -->
-                        <excludes>
+                       <!-- <excludes>
                             <exclude>remark/package.json</exclude>
                             <exclude>remark/node_modules/**</exclude>
                             <exclude>remark/Gulpfile.js</exclude>
                             <exclude>remark/theme/**</exclude>
-                        </excludes>
+                        </excludes>-->
                     </resource>
                 </resources>
 
@@ -180,7 +180,7 @@
                     </plugin>
 
                     <!-- Include generated sources in output and filter fonts and images (fonts do not work if they do not get filtered). -->
-                    <plugin>
+                   <!-- <plugin>
                         <artifactId>maven-resources-plugin</artifactId>
                         <version>${maven-resources-plugin.version}</version>
                         <executions>
@@ -214,10 +214,10 @@
                                 </configuration>
                             </execution>
                         </executions>
-                    </plugin>
+                    </plugin>-->
 
                     <!-- Add Dagger generated sources to the source path. GWT compile needs this. -->
-                    <plugin>
+                    <!--<plugin>
                         <groupId>org.codehaus.mojo</groupId>
                         <artifactId>build-helper-maven-plugin</artifactId>
                         <version>${build-helper-maven-plugin.version}</version>
@@ -235,10 +235,10 @@
                                 </configuration>
                             </execution>
                         </executions>
-                    </plugin>
+                    </plugin>-->
 
                     <!-- GWT Compile -->
-                    <plugin>
+                    <!--<plugin>
                         <groupId>org.codehaus.mojo</groupId>
                         <artifactId>gwt-maven-plugin</artifactId>
                         <version>${gwt-maven-plugin.version}</version>
@@ -258,7 +258,7 @@
                                 </goals>
                             </execution>
                         </executions>
-                    </plugin>
+                    </plugin>-->
 
                     <!-- Sign GPG -->
                     <plugin>

@@ -4,8 +4,6 @@ import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 
-import java.util.Date;
-
 
 @JsType(isNative = true)
 public class Moment {
@@ -31,7 +29,7 @@ public class Moment {
 
     public static native Moment moment(Parts parts);
 
-    public static native Moment moment(long millis);
+    public static native Moment moment(int millis);
 
     @JsMethod(namespace = "moment")
     public static native Moment unix(double millis);
@@ -44,7 +42,7 @@ public class Moment {
     public static native Moment utc();
 
     @JsMethod(namespace = "moment")
-    public static native Moment utc(long millis);
+    public static native Moment utc(int millis);
 
     @JsMethod(namespace = "moment")
     public static native Moment utc(int[] values);
@@ -104,7 +102,7 @@ public class Moment {
     public native String calendar();
 
     @JsType
-     class Parts {
+    class Parts {
         @JsProperty
         String year;
         @JsProperty
@@ -119,14 +117,28 @@ public class Moment {
         String seconds;
         @JsProperty
         String milliseconds;
-    }
 
-    @JsType(isNative = true)
-    class CreationData {
-        String input;
-        String format;
-        Object locale; // todo use locale object
-        boolean isUTC;
-        boolean strict;
+        public Parts(String year, String month, String day, String hour, String minute, String seconds, String milliseconds) {
+            this.year = year;
+            this.month = month;
+            this.day = day;
+            this.hour = hour;
+            this.minute = minute;
+            this.seconds = seconds;
+            this.milliseconds = milliseconds;
+        }
+
+        public Parts(String year, String month, String day) {
+            this.year = year;
+            this.month = month;
+            this.day = day;
+        }
+
+        public Parts(String hour, String minute, String seconds, String milliseconds) {
+            this.hour = hour;
+            this.minute = minute;
+            this.seconds = seconds;
+            this.milliseconds = milliseconds;
+        }
     }
 }
