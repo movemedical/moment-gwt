@@ -1,41 +1,59 @@
 package momentGwt.client;
 
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsProperty;
-import jsinterop.annotations.JsType;
+import com.google.gwt.core.client.js.JsNamespace;
+import jsinterop.annotations.*;
 
 
 @JsType(isNative = true)
 public class Moment {
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
+    // Parse
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    @JsMethod(namespace = JsNamespace.GLOBAL)
     public static native Moment moment();
 
+    @JsMethod(namespace = JsNamespace.GLOBAL)
     public static native Moment moment(String value);
 
+    @JsMethod(namespace = JsNamespace.GLOBAL)
     public static native Moment moment(String value, String format);
 
+    @JsMethod(namespace = JsNamespace.GLOBAL)
     public static native Moment moment(String value, String format, String locale);
 
+    @JsMethod(namespace = JsNamespace.GLOBAL)
     public static native Moment moment(String value, String format, boolean strictParsing);
 
+    @JsMethod(namespace = JsNamespace.GLOBAL)
     public static native Moment moment(String value, String format, String locale, boolean strictParsing);
 
+    @JsMethod(namespace = JsNamespace.GLOBAL)
     public static native Moment moment(String value, String[] formats);
 
+    @JsMethod(namespace = JsNamespace.GLOBAL)
     public static native Moment moment(String value, String[] formats, String locale);
 
+    @JsMethod(namespace = JsNamespace.GLOBAL)
     public static native Moment moment(String value, String[] formats, boolean strictParsing);
 
+    @JsMethod(namespace = JsNamespace.GLOBAL)
     public static native Moment moment(String value, String[] formats, String locale, boolean strictParsing);
 
+    @JsMethod(namespace = JsNamespace.GLOBAL)
     public static native Moment moment(Parts parts);
 
+    @JsMethod(namespace = JsNamespace.GLOBAL)
     public static native Moment moment(int millis);
 
     @JsMethod(namespace = "moment")
     public static native Moment unix(double millis);
 
+    @JsMethod(namespace = JsNamespace.GLOBAL)
     public static native Moment moment(int[] values);
 
+    @JsMethod(namespace = JsNamespace.GLOBAL)
     public static native Moment moment(Moment moment);
 
     @JsMethod(namespace = "moment")
@@ -73,12 +91,14 @@ public class Moment {
 
     public native CreationData creationData();
 
+    // Used for setting defaults. also works for moment(String, String) already defined above
+    @JsMethod(namespace = JsNamespace.GLOBAL)
+    public static native void moment(int defaultValue, String property);
 
-    // Setting Defaults
-    // also works for moment(String, String) already defined above
-    public static native void moment(int value, String property);
 
-    // Getter and Setter
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
+    // Get + Set
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
 
     public native int milliseconds();
 
@@ -95,29 +115,63 @@ public class Moment {
     // TODO
 
 
-    public native String format(String format);
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
+    // Manipulate
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    public native String fromNow();
 
-    public native String calendar();
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
+    // Display
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
+    // Query
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
+    // i18n
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
+    // Customize
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
+    // Durations
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
+    // Utilities
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
+    // Supporting Classes
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
 
     @JsType
     class Parts {
         @JsProperty
-        String year;
+        public String year;
         @JsProperty
-        String month;
+        public String month;
         @JsProperty
-        String day;
+        public String day;
         @JsProperty
-        String hour;
+        public String hour;
         @JsProperty
-        String minute;
+        public String minute;
         @JsProperty
-        String seconds;
+        public String seconds;
         @JsProperty
-        String milliseconds;
+        public String milliseconds;
 
+        @JsIgnore
         public Parts(String year, String month, String day, String hour, String minute, String seconds, String milliseconds) {
             this.year = year;
             this.month = month;
@@ -128,17 +182,33 @@ public class Moment {
             this.milliseconds = milliseconds;
         }
 
+        @JsIgnore
         public Parts(String year, String month, String day) {
             this.year = year;
             this.month = month;
             this.day = day;
         }
 
+        @JsIgnore
         public Parts(String hour, String minute, String seconds, String milliseconds) {
             this.hour = hour;
             this.minute = minute;
             this.seconds = seconds;
             this.milliseconds = milliseconds;
         }
+    }
+
+    @JsType
+    public class CreationData {
+        @JsProperty
+        public String input;
+        @JsProperty
+        public String format;
+        @JsProperty
+        public Object locale; // todo use locale object
+        @JsProperty
+        public boolean isUTC;
+        @JsProperty
+        public boolean strict;
     }
 }
