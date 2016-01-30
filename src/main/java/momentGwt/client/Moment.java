@@ -107,11 +107,6 @@ public class Moment {
     // Get + Set
     ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    // the following two set/get seem to have the same function so commenting out the firs pair for now
-//    public native int millisecond();
-//
-//    public native Moment millisecond(int milliseconds);
-
     public native int milliseconds();
 
     public native Moment milliseconds(int milliseconds);
@@ -132,7 +127,7 @@ public class Moment {
     public native int date();
     public native Moment date(int date);
 
-    // day of the week in reference to sunday as 0, day returns only a number when empty method call
+    // day of week. sunday = 0
     public native int day();
     public native Moment day(int day);
     public native Moment day(String day);
@@ -153,7 +148,7 @@ public class Moment {
     public native int isoWeek();
     public native Moment isoWeek(int isoWeek);
 
-    // months, january is month 0, month returns an int when empty method call
+    // january = 0
     public native int month();
     public native Moment month(int month);
     public native Moment month(String month);
@@ -215,10 +210,8 @@ public class Moment {
     // Display
     ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    //  todo - could implement some of these to use generic objects, in JS they are also overloaded for generic JSObjects as well
-
     public native Moment format();
-    public native Moment format(String format);  // could eventually add a format enum to list options, and integrate it here
+    public native Moment format(String format);
 
     public native Moment fromNow();
     public native Moment fromNow(boolean noSuffix);
@@ -491,6 +484,7 @@ public class Moment {
     // used to create an invalid moment object
     @JsMethod(namespace = "moment")
     public static native Object invalid(Object object);
+
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////
     // Moment Timezone
