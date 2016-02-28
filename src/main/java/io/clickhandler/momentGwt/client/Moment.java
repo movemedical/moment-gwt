@@ -1,4 +1,4 @@
-package momentGwt.client;
+package io.clickhandler.momentGwt.client;
 
 import com.google.gwt.core.client.ScriptInjector;
 import com.google.gwt.core.client.js.JsNamespace;

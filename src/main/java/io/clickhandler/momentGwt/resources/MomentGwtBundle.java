@@ -1,4 +1,4 @@
-package momentGwt.resources;
+package io.clickhandler.momentGwt.resources;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.resources.client.ClientBundle;

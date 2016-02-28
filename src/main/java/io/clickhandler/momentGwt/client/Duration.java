@@ -1,4 +1,4 @@
-package momentGwt.client;
+package io.clickhandler.momentGwt.client;
 
 import jsinterop.annotations.JsMethod;
 import jsinterop.annotations.JsType;
