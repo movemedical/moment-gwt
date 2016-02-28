@@ -1,7 +1,6 @@
 package io.clickhandler.momentGwt.client;
 
 import com.google.gwt.core.client.ScriptInjector;
-import com.google.gwt.core.client.js.JsNamespace;
 import io.clickhandler.momentGwt.resources.MomentGwtBundle;
 import jsinterop.annotations.*;
 
@@ -21,52 +20,52 @@ public class Moment {
     // Parse
     ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    @JsMethod(namespace = JsNamespace.GLOBAL)
+    @JsMethod(namespace = "")
     public static native Moment moment();
 
-    @JsMethod(namespace = JsNamespace.GLOBAL)
+    @JsMethod(namespace = "")
     public static native Moment moment(String value);
 
-    @JsMethod(namespace = JsNamespace.GLOBAL)
+    @JsMethod(namespace = "")
     public static native Moment moment(String value, String format);
 
-    @JsMethod(namespace = JsNamespace.GLOBAL)
+    @JsMethod(namespace = "")
     public static native Moment moment(String value, String format, String locale);
 
-    @JsMethod(namespace = JsNamespace.GLOBAL)
+    @JsMethod(namespace = "")
     public static native Moment moment(String value, String format, boolean strictParsing);
 
-    @JsMethod(namespace = JsNamespace.GLOBAL)
+    @JsMethod(namespace = "")
     public static native Moment moment(String value, String format, String locale, boolean strictParsing);
 
-    @JsMethod(namespace = JsNamespace.GLOBAL)
+    @JsMethod(namespace = "")
     public static native Moment moment(String value, String[] formats);
 
-    @JsMethod(namespace = JsNamespace.GLOBAL)
+    @JsMethod(namespace = "")
     public static native Moment moment(String value, String[] formats, String locale);
 
-    @JsMethod(namespace = JsNamespace.GLOBAL)
+    @JsMethod(namespace = "")
     public static native Moment moment(String value, String[] formats, boolean strictParsing);
 
-    @JsMethod(namespace = JsNamespace.GLOBAL)
+    @JsMethod(namespace = "")
     public static native Moment moment(String value, String[] formats, String locale, boolean strictParsing);
 
-    @JsMethod(namespace = JsNamespace.GLOBAL)
+    @JsMethod(namespace = "")
     public static native Moment moment(Parts parts);
 
-    @JsMethod(namespace = JsNamespace.GLOBAL)
+    @JsMethod(namespace = "")
     public static native Moment moment(int millis);
 
     @JsMethod(namespace = "moment")
     public static native Moment unix(double millis);
 
-    @JsMethod(namespace = JsNamespace.GLOBAL)
+    @JsMethod(namespace = "")
     public static native Moment moment(int[] values);
 
-    @JsMethod(namespace = JsNamespace.GLOBAL)
+    @JsMethod(namespace = "")
     public static native Moment moment(Moment moment);
 
-    @JsMethod(namespace = JsNamespace.GLOBAL)
+    @JsMethod(namespace = "")
     public static native Moment moment(Date date);
 
     // can create a jsmethod with the special formats as an enum
@@ -107,7 +106,7 @@ public class Moment {
     public native CreationData creationData();
 
     // Used for setting defaults. also works for moment(String, String) already defined above
-    @JsMethod(namespace = JsNamespace.GLOBAL)
+    @JsMethod(namespace = "")
     public static native void moment(int defaultValue, String property);
 
 
