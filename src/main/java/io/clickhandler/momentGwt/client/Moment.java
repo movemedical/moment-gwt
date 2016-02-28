@@ -2,8 +2,8 @@ package io.clickhandler.momentGwt.client;
 
 import com.google.gwt.core.client.ScriptInjector;
 import com.google.gwt.core.client.js.JsNamespace;
+import io.clickhandler.momentGwt.resources.MomentGwtBundle;
 import jsinterop.annotations.*;
-import momentGwt.resources.MomentGwtBundle;
 
 import java.util.Date;
 

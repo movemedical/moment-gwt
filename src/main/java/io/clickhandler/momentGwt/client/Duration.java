@@ -46,6 +46,4 @@ public class Duration {
     public native Duration substract(int amount);
     public native Duration substract(Duration duration);
     public native Duration substract(Object object);
-
-
 }
