@@ -8,18 +8,9 @@ import com.google.gwt.resources.client.TextResource;
 public interface MomentGwtBundle extends ClientBundle {
     MomentGwtBundle INSTANCE = GWT.create(MomentGwtBundle.class);
 
-    @Source("moment/moment.js")
-    TextResource moment();
-
-    @Source("moment/moment-with-locales.js")
+    @Source("moment-with-locales.min.js")
     TextResource momentWithLocales();
 
-    @Source("momentTimezone/moment-timezone.js")
-    TextResource momentTimezone();
-
-    @Source("momentTimezone/moment-timezone-with-data.js")
+    @Source("moment-timezone-with-data.min.js")
     TextResource momentTimezoneWithData();
-
-    @Source("momentTimezone/moment-timezone-with-data-2010-2020.js")
-    TextResource momentTimezoneWithData2010to2020();
 }

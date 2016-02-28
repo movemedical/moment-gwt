@@ -8,7 +8,4 @@
 
     <source path="client"/>
     <source path="resources"/>
-
-    <!-- Include MomentJs with Locales, and Moment Timezone with all data -->
-    <entry-point class="momentGwt.client.MomentEntryPoint"/>
 </module>

@@ -1,13 +1,21 @@
 package momentGwt.client;
 
+import com.google.gwt.core.client.ScriptInjector;
 import com.google.gwt.core.client.js.JsNamespace;
 import jsinterop.annotations.*;
+import momentGwt.resources.MomentGwtBundle;
 
 import java.util.Date;
 
 
 @JsType(isNative = true)
 public class Moment {
+
+    @JsOverlay
+    public static void injectJavascript() {
+        ScriptInjector.fromString(MomentGwtBundle.INSTANCE.momentWithLocales().getText()).setWindow(ScriptInjector.TOP_WINDOW).inject();
+        ScriptInjector.fromString(MomentGwtBundle.INSTANCE.momentTimezoneWithData().getText()).setWindow(ScriptInjector.TOP_WINDOW).inject();
+    }
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////
     // Parse
