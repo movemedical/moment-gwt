@@ -54,13 +54,13 @@ public class Moment {
     public static native Moment moment(Parts parts);
 
     @JsMethod(namespace = JsPackage.GLOBAL)
-    public static native Moment moment(int millis);
+    public static native Moment moment(double millis);
 
     @JsMethod(namespace = "moment")
     public static native Moment unix(double millis);
 
     @JsMethod(namespace = JsPackage.GLOBAL)
-    public static native Moment moment(int[] values);
+    public static native Moment moment(double[] values);
 
     @JsMethod(namespace = JsPackage.GLOBAL)
     public static native Moment moment(Moment moment);
@@ -107,7 +107,7 @@ public class Moment {
 
     // Used for setting defaults. also works for moment(String, String) already defined above
     @JsMethod(namespace = JsPackage.GLOBAL)
-    public static native void moment(int defaultValue, String property);
+    public static native void moment(double defaultValue, String property);
 
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -309,14 +309,14 @@ public class Moment {
     public native Moment isBefore(String value);
     public native Moment isBefore(String value, String key);
 
-    public native Moment isBefore(int value);
-    public native Moment isBefore(int value, String key);
+    public native Moment isBefore(double value);
+    public native Moment isBefore(double value, String key);
 
     public native Moment isBefore(Date date);
     public native Moment isBefore(Date date, String key);
 
-    public native Moment isBefore(int[] values);
-    public native Moment isBefore(int[] values, String key);
+    public native Moment isBefore(double[] values);
+    public native Moment isBefore(double[] values, String key);
 
     public native Moment isSame(Moment moment);
     public native Moment isSame(Moment moment, String key);
@@ -324,14 +324,14 @@ public class Moment {
     public native Moment isSame(String value);
     public native Moment isSame(String value, String key);
 
-    public native Moment isSame(int value);
-    public native Moment isSame(int value, String key);
+    public native Moment isSame(double value);
+    public native Moment isSame(double value, String key);
 
     public native Moment isSame(Date date);
     public native Moment isSame(Date date, String key);
 
-    public native Moment isSame(int[] values);
-    public native Moment isSame(int[] values, String key);
+    public native Moment isSame(double[] values);
+    public native Moment isSame(double[] values, String key);
 
     public native Moment isAfter(Moment moment);
     public native Moment isAfter(Moment moment, String key);
@@ -339,14 +339,14 @@ public class Moment {
     public native Moment isAfter(String value);
     public native Moment isAfter(String value, String key);
 
-    public native Moment isAfter(int value);
-    public native Moment isAfter(int value, String key);
+    public native Moment isAfter(double value);
+    public native Moment isAfter(double value, String key);
 
     public native Moment isAfter(Date date);
     public native Moment isAfter(Date date, String key);
 
-    public native Moment isAfter(int[] values);
-    public native Moment isAfter(int[] values, String key);
+    public native Moment isAfter(double[] values);
+    public native Moment isAfter(double[] values, String key);
 
     public native Moment isSameOrBefore(Moment moment);
     public native Moment isSameOrBefore(Moment moment, String key);
@@ -354,14 +354,14 @@ public class Moment {
     public native Moment isSameOrBefore(String value);
     public native Moment isSameOrBefore(String value, String key);
 
-    public native Moment isSameOrBefore(int value);
-    public native Moment isSameOrBefore(int value, String key);
+    public native Moment isSameOrBefore(double value);
+    public native Moment isSameOrBefore(double value, String key);
 
     public native Moment isSameOrBefore(Date date);
     public native Moment isSameOrBefore(Date date, String key);
 
-    public native Moment isSameOrBefore(int[] values);
-    public native Moment isSameOrBefore(int[] values, String key);
+    public native Moment isSameOrBefore(double[] values);
+    public native Moment isSameOrBefore(double[] values, String key);
 
     public native Moment isSameOrAfter(Moment moment);
     public native Moment isSameOrAfter(Moment moment, String key);
@@ -369,14 +369,14 @@ public class Moment {
     public native Moment isSameOrAfter(String value);
     public native Moment isSameOrAfter(String value, String key);
 
-    public native Moment isSameOrAfter(int value);
-    public native Moment isSameOrAfter(int value, String key);
+    public native Moment isSameOrAfter(double value);
+    public native Moment isSameOrAfter(double value, String key);
 
     public native Moment isSameOrAfter(Date date);
     public native Moment isSameOrAfter(Date date, String key);
 
-    public native Moment isSameOrAfter(int[] values);
-    public native Moment isSameOrAfter(int[] values, String key);
+    public native Moment isSameOrAfter(double[] values);
+    public native Moment isSameOrAfter(double[] values, String key);
 
     public native Moment isBetween(Moment moment, Moment moment2);
     public native Moment isBetween(Moment moment, Moment moment2, String key);
@@ -384,14 +384,14 @@ public class Moment {
     public native Moment isBetween(String value, String value2);
     public native Moment isBetween(String value, String value2, String key);
 
-    public native Moment isBetween(int value, int value2);
-    public native Moment isBetween(int value, int value2, String key);
+    public native Moment isBetween(double value, double value2);
+    public native Moment isBetween(double value, double value2, String key);
 
     public native Moment isBetween(Date date, Date date2);
     public native Moment isBetween(Date date, Date date2, String key);
 
-    public native Moment isBetween(int[] values, int[] values2);
-    public native Moment isBetween(int[] values, int[] values2, String key);
+    public native Moment isBetween(double[] values, double[] values2);
+    public native Moment isBetween(double[] values, double[] values2, String key);
 
     // check if moment is daylight savings time
     public native boolean isDST();
