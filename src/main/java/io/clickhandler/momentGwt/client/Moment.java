@@ -20,52 +20,52 @@ public class Moment {
     // Parse
     ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    @JsMethod(namespace = "")
+    @JsMethod(namespace = JsPackage.GLOBAL)
     public static native Moment moment();
 
-    @JsMethod(namespace = "")
+    @JsMethod(namespace = JsPackage.GLOBAL)
     public static native Moment moment(String value);
 
-    @JsMethod(namespace = "")
+    @JsMethod(namespace = JsPackage.GLOBAL)
     public static native Moment moment(String value, String format);
 
-    @JsMethod(namespace = "")
+    @JsMethod(namespace = JsPackage.GLOBAL)
     public static native Moment moment(String value, String format, String locale);
 
-    @JsMethod(namespace = "")
+    @JsMethod(namespace = JsPackage.GLOBAL)
     public static native Moment moment(String value, String format, boolean strictParsing);
 
-    @JsMethod(namespace = "")
+    @JsMethod(namespace = JsPackage.GLOBAL)
     public static native Moment moment(String value, String format, String locale, boolean strictParsing);
 
-    @JsMethod(namespace = "")
+    @JsMethod(namespace = JsPackage.GLOBAL)
     public static native Moment moment(String value, String[] formats);
 
-    @JsMethod(namespace = "")
+    @JsMethod(namespace = JsPackage.GLOBAL)
     public static native Moment moment(String value, String[] formats, String locale);
 
-    @JsMethod(namespace = "")
+    @JsMethod(namespace = JsPackage.GLOBAL)
     public static native Moment moment(String value, String[] formats, boolean strictParsing);
 
-    @JsMethod(namespace = "")
+    @JsMethod(namespace = JsPackage.GLOBAL)
     public static native Moment moment(String value, String[] formats, String locale, boolean strictParsing);
 
-    @JsMethod(namespace = "")
+    @JsMethod(namespace = JsPackage.GLOBAL)
     public static native Moment moment(Parts parts);
 
-    @JsMethod(namespace = "")
+    @JsMethod(namespace = JsPackage.GLOBAL)
     public static native Moment moment(int millis);
 
     @JsMethod(namespace = "moment")
     public static native Moment unix(double millis);
 
-    @JsMethod(namespace = "")
+    @JsMethod(namespace = JsPackage.GLOBAL)
     public static native Moment moment(int[] values);
 
-    @JsMethod(namespace = "")
+    @JsMethod(namespace = JsPackage.GLOBAL)
     public static native Moment moment(Moment moment);
 
-    @JsMethod(namespace = "")
+    @JsMethod(namespace = JsPackage.GLOBAL)
     public static native Moment moment(Date date);
 
     // can create a jsmethod with the special formats as an enum
@@ -106,7 +106,7 @@ public class Moment {
     public native CreationData creationData();
 
     // Used for setting defaults. also works for moment(String, String) already defined above
-    @JsMethod(namespace = "")
+    @JsMethod(namespace = JsPackage.GLOBAL)
     public static native void moment(int defaultValue, String property);
 
 
@@ -280,15 +280,17 @@ public class Moment {
     public native Moment diff(int[] values, String key);
     public native Moment diff(int[] values, String key, boolean noSuffix);
 
-    public native Moment valueOf();
+    public native double valueOf();
 
-    public native Moment daysInMonth();
+    public native double unix();
 
-    public native Moment toArray();
+    public native double daysInMonth();
 
-    public native Moment toJSON();
+    public native double[] toArray();
 
-    public native Moment toISOString();
+    public native String toJSON();
+
+    public native String toISOString();
 
     // returns an object containing year, month, day-of-month, hour, minute, seconds, milliseconds
     public native Object toObject();
