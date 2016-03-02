@@ -217,8 +217,8 @@ public class Moment {
     // Display
     ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    public native Moment format();
-    public native Moment format(String format);
+    public native String format();
+    public native String format(String format);
 
     public native Moment fromNow();
     public native Moment fromNow(boolean noSuffix);
@@ -303,95 +303,95 @@ public class Moment {
     // optional String parameter is for precision, defaults to milliseconds but can be defined as other
     // as before, units of time are... year month week day hour minute second
 
-    public native Moment isBefore(Moment moment);
-    public native Moment isBefore(Moment moment, String key);
+    public native boolean isBefore(Moment moment);
+    public native boolean isBefore(Moment moment, String key);
 
-    public native Moment isBefore(String value);
-    public native Moment isBefore(String value, String key);
+    public native boolean isBefore(String value);
+    public native boolean isBefore(String value, String key);
 
-    public native Moment isBefore(double value);
-    public native Moment isBefore(double value, String key);
+    public native boolean isBefore(double value);
+    public native boolean isBefore(double value, String key);
 
-    public native Moment isBefore(Date date);
-    public native Moment isBefore(Date date, String key);
+    public native boolean isBefore(Date date);
+    public native boolean isBefore(Date date, String key);
 
-    public native Moment isBefore(double[] values);
-    public native Moment isBefore(double[] values, String key);
+    public native boolean isBefore(double[] values);
+    public native boolean isBefore(double[] values, String key);
 
-    public native Moment isSame(Moment moment);
-    public native Moment isSame(Moment moment, String key);
+    public native boolean isSame(Moment moment);
+    public native boolean isSame(Moment moment, String key);
 
-    public native Moment isSame(String value);
-    public native Moment isSame(String value, String key);
+    public native boolean isSame(String value);
+    public native boolean isSame(String value, String key);
 
-    public native Moment isSame(double value);
-    public native Moment isSame(double value, String key);
+    public native boolean isSame(double value);
+    public native boolean isSame(double value, String key);
 
-    public native Moment isSame(Date date);
-    public native Moment isSame(Date date, String key);
+    public native boolean isSame(Date date);
+    public native boolean isSame(Date date, String key);
 
-    public native Moment isSame(double[] values);
-    public native Moment isSame(double[] values, String key);
+    public native boolean isSame(double[] values);
+    public native boolean isSame(double[] values, String key);
 
-    public native Moment isAfter(Moment moment);
-    public native Moment isAfter(Moment moment, String key);
+    public native boolean isAfter(Moment moment);
+    public native boolean isAfter(Moment moment, String key);
 
-    public native Moment isAfter(String value);
-    public native Moment isAfter(String value, String key);
+    public native boolean isAfter(String value);
+    public native boolean isAfter(String value, String key);
 
-    public native Moment isAfter(double value);
-    public native Moment isAfter(double value, String key);
+    public native boolean isAfter(double value);
+    public native boolean isAfter(double value, String key);
 
-    public native Moment isAfter(Date date);
-    public native Moment isAfter(Date date, String key);
+    public native boolean isAfter(Date date);
+    public native boolean isAfter(Date date, String key);
 
-    public native Moment isAfter(double[] values);
-    public native Moment isAfter(double[] values, String key);
+    public native boolean isAfter(double[] values);
+    public native boolean isAfter(double[] values, String key);
 
-    public native Moment isSameOrBefore(Moment moment);
-    public native Moment isSameOrBefore(Moment moment, String key);
+    public native boolean isSameOrBefore(Moment moment);
+    public native boolean isSameOrBefore(Moment moment, String key);
 
-    public native Moment isSameOrBefore(String value);
-    public native Moment isSameOrBefore(String value, String key);
+    public native boolean isSameOrBefore(String value);
+    public native boolean isSameOrBefore(String value, String key);
 
-    public native Moment isSameOrBefore(double value);
-    public native Moment isSameOrBefore(double value, String key);
+    public native boolean isSameOrBefore(double value);
+    public native boolean isSameOrBefore(double value, String key);
 
-    public native Moment isSameOrBefore(Date date);
-    public native Moment isSameOrBefore(Date date, String key);
+    public native boolean isSameOrBefore(Date date);
+    public native boolean isSameOrBefore(Date date, String key);
 
-    public native Moment isSameOrBefore(double[] values);
-    public native Moment isSameOrBefore(double[] values, String key);
+    public native boolean isSameOrBefore(double[] values);
+    public native boolean isSameOrBefore(double[] values, String key);
 
-    public native Moment isSameOrAfter(Moment moment);
-    public native Moment isSameOrAfter(Moment moment, String key);
+    public native boolean isSameOrAfter(Moment moment);
+    public native boolean isSameOrAfter(Moment moment, String key);
 
-    public native Moment isSameOrAfter(String value);
-    public native Moment isSameOrAfter(String value, String key);
+    public native boolean isSameOrAfter(String value);
+    public native boolean isSameOrAfter(String value, String key);
 
-    public native Moment isSameOrAfter(double value);
-    public native Moment isSameOrAfter(double value, String key);
+    public native boolean isSameOrAfter(double value);
+    public native boolean isSameOrAfter(double value, String key);
 
-    public native Moment isSameOrAfter(Date date);
-    public native Moment isSameOrAfter(Date date, String key);
+    public native boolean isSameOrAfter(Date date);
+    public native boolean isSameOrAfter(Date date, String key);
 
-    public native Moment isSameOrAfter(double[] values);
-    public native Moment isSameOrAfter(double[] values, String key);
+    public native boolean isSameOrAfter(double[] values);
+    public native boolean isSameOrAfter(double[] values, String key);
 
-    public native Moment isBetween(Moment moment, Moment moment2);
-    public native Moment isBetween(Moment moment, Moment moment2, String key);
+    public native boolean isBetween(Moment moment, Moment moment2);
+    public native boolean isBetween(Moment moment, Moment moment2, String key);
 
-    public native Moment isBetween(String value, String value2);
-    public native Moment isBetween(String value, String value2, String key);
+    public native boolean isBetween(String value, String value2);
+    public native boolean isBetween(String value, String value2, String key);
 
-    public native Moment isBetween(double value, double value2);
-    public native Moment isBetween(double value, double value2, String key);
+    public native boolean isBetween(double value, double value2);
+    public native boolean isBetween(double value, double value2, String key);
 
-    public native Moment isBetween(Date date, Date date2);
-    public native Moment isBetween(Date date, Date date2, String key);
+    public native boolean isBetween(Date date, Date date2);
+    public native boolean isBetween(Date date, Date date2, String key);
 
-    public native Moment isBetween(double[] values, double[] values2);
-    public native Moment isBetween(double[] values, double[] values2, String key);
+    public native boolean isBetween(double[] values, double[] values2);
+    public native boolean isBetween(double[] values, double[] values2, String key);
 
     // check if moment is daylight savings time
     public native boolean isDST();
