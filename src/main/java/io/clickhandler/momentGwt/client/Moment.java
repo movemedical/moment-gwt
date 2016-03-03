@@ -286,6 +286,8 @@ public class Moment {
 
     public native double daysInMonth();
 
+    public native Date toDate();
+
     public native double[] toArray();
 
     public native String toJSON();
