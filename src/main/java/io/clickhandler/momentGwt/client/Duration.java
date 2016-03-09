@@ -12,21 +12,21 @@ public class Duration {
     ////////////////////////////////////////////////////////////////////////////////////////////////////
 
     public native String humanize();
-    public native int milliseconds();
-    public native int asMilliseconds();
-    public native int seconds();
-    public native int asSeconds();
-    public native int minutes();
-    public native int asMinutes();
-    public native int hours();
-    public native int asHours();
-    public native int days();
-    public native int asDays();
-    public native int months();
-    public native int asMonths();
-    public native int years();
-    public native int asYears();
-    public native Duration toJSON();
+    public native double milliseconds();
+    public native double asMilliseconds();
+    public native double seconds();
+    public native double asSeconds();
+    public native double minutes();
+    public native double asMinutes();
+    public native double hours();
+    public native double asHours();
+    public native double days();
+    public native double asDays();
+    public native double months();
+    public native double asMonths();
+    public native double years();
+    public native double asYears();
+    public native Object toJSON();
 
 
     @JsMethod(namespace = "duration")
@@ -37,13 +37,13 @@ public class Duration {
 
 
     // can call other methods like add and subtract on a duration instance
-    public native Duration add(int amount, String key);
-    public native Duration add(int amount);
+    public native Duration add(double amount, String key);
+    public native Duration add(double amount);
     public native Duration add(Duration duration);
     public native Duration add(Object object);
 
-    public native Duration substract(int amount, String key);
-    public native Duration substract(int amount);
+    public native Duration substract(double amount, String key);
+    public native Duration substract(double amount);
     public native Duration substract(Duration duration);
     public native Duration substract(Object object);
 }

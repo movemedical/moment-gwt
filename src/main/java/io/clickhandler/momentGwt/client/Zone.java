@@ -15,7 +15,7 @@ public class Zone {
     @JsProperty
     public double[] until; // timestamps in milliseconds
     @JsProperty
-    public int[] offsets;
+    public double[] offsets;
 
     public native String format();
     public native String zoneAbbr();

@@ -220,65 +220,65 @@ public class Moment {
     public native String format();
     public native String format(String format);
 
-    public native Moment fromNow();
-    public native Moment fromNow(boolean noSuffix);
+    public native String fromNow();
+    public native String fromNow(boolean noSuffix);
 
-    public native Moment from(Moment moment);
-    public native Moment from(Moment moment, boolean noSuffix);
+    public native String from(Moment moment);
+    public native String from(Moment moment, boolean noSuffix);
 
-    public native Moment from(String value);
-    public native Moment from(String value, boolean noSuffix);
+    public native String from(String value);
+    public native String from(String value, boolean noSuffix);
 
-    public native Moment from(int value);
-    public native Moment from(int value, boolean noSuffix);
+    public native String from(int value);
+    public native String from(int value, boolean noSuffix);
 
-    public native Moment from(Date value);
-    public native Moment from(Date value, boolean noSuffix);
+    public native String from(Date value);
+    public native String from(Date value, boolean noSuffix);
 
-    public native Moment from(int[] values);
-    public native Moment from(int[] values, boolean noSuffix);
+    public native String from(int[] values);
+    public native String from(int[] values, boolean noSuffix);
 
-    public native Moment toNow();
-    public native Moment toNow(boolean noSuffix);
+    public native String toNow();
+    public native String toNow(boolean noSuffix);
 
-    public native Moment to(Moment moment);
-    public native Moment to(Moment moment, boolean noSuffix);
+    public native String to(Moment moment);
+    public native String to(Moment moment, boolean noSuffix);
 
-    public native Moment to(String value);
-    public native Moment to(String value, boolean noSuffix);
+    public native String to(String value);
+    public native String to(String value, boolean noSuffix);
 
-    public native Moment to(int value);
-    public native Moment to(int value, boolean noSuffix);
+    public native String to(int value);
+    public native String to(int value, boolean noSuffix);
 
-    public native Moment to(Date value);
-    public native Moment to(Date value, boolean noSuffix);
+    public native String to(Date value);
+    public native String to(Date value, boolean noSuffix);
 
-    public native Moment to(int[] values);
-    public native Moment to(int[] values, boolean noSuffix);
+    public native String to(int[] values);
+    public native String to(int[] values, boolean noSuffix);
 
-    public native Moment calendar();
-    public native Moment calendar(Moment moment);
-    public native Moment calendar(Moment moment, Calendar formats);
+    public native String calendar();
+    public native String calendar(Moment moment);
+    public native String calendar(Moment moment, Calendar formats);  // takes an object of key/String pairs, seems to return Stings
 
-    public native Moment diff(Moment moment);
-    public native Moment diff(Moment moment, String key);
-    public native Moment diff(Moment moment, boolean noSuffix);
+    public native double diff(Moment moment);
+    public native double diff(Moment moment, String key);
+    public native double diff(Moment moment, boolean noSuffix);
 
-    public native Moment diff(String value);
-    public native Moment diff(String value, String key);
-    public native Moment diff(String value, boolean noSuffix);
+    public native double diff(String value);
+    public native double diff(String value, String key);
+    public native double diff(String value, boolean noSuffix);
 
-    public native Moment diff(int value);
-    public native Moment diff(int value, String key);
-    public native Moment diff(int value, boolean noSuffix);
+    public native double diff(int value);
+    public native double diff(int value, String key);
+    public native double diff(int value, boolean noSuffix);
 
-    public native Moment diff(Date value);
-    public native Moment diff(Date value, String key);
-    public native Moment diff(Date value, String key, boolean noSuffix);
+    public native double diff(Date value);
+    public native double diff(Date value, String key);
+    public native double diff(Date value, String key, boolean noSuffix);
 
-    public native Moment diff(int[] values);
-    public native Moment diff(int[] values, String key);
-    public native Moment diff(int[] values, String key, boolean noSuffix);
+    public native double diff(int[] values);
+    public native double diff(int[] values, String key);
+    public native double diff(int[] values, String key, boolean noSuffix);
 
     public native double valueOf();
 
@@ -416,7 +416,7 @@ public class Moment {
     // i18n
     ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    // todo - can overload for generic JSObjects as well
+    // todo - can overload for generic JSObjects as well, there are some localeData checks for customizing if needed, not used yet however
     // get
     @JsMethod(namespace = "moment")
     public static native Object locale();
