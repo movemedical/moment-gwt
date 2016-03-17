@@ -207,9 +207,9 @@ public class Moment {
     public native Moment local();
 
     // replaces zone() now
-    public native Moment utcOffset();
+    public native double utcOffset();
     public native Moment utcOffset(String offset); // if String required + or - at beginning
-    public native Moment utcOffset(int offset);
+    public native Moment utcOffset(double offset);
 
 
 
