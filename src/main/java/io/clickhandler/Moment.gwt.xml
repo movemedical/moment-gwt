@@ -6,6 +6,6 @@
     <inherits name="com.google.gwt.logging.Logging"/>
     <inherits name="com.google.gwt.user.Debug"/>
 
-    <source path="client"/>
-    <source path="resources"/>
+    <source path="momentGwt/client"/>
+    <source path="momentGwt/resources"/>
 </module>
