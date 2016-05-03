@@ -1,12 +1,12 @@
-package io.clickhandler.momentGwt.resources;
+package moment.resources;
 
 import com.google.gwt.core.client.GWT;
 import com.google.gwt.resources.client.ClientBundle;
 import com.google.gwt.resources.client.TextResource;
 
 
-public interface MomentGwtBundle extends ClientBundle {
-    MomentGwtBundle INSTANCE = GWT.create(MomentGwtBundle.class);
+public interface MomentBundle extends ClientBundle {
+    MomentBundle INSTANCE = GWT.create(MomentBundle.class);
 
     @Source("moment-with-locales.min.js")
     TextResource momentWithLocales();

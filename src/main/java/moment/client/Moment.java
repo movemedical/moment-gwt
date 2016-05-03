@@ -1,8 +1,8 @@
-package io.clickhandler.momentGwt.client;
+package moment.client;
 
 import com.google.gwt.core.client.ScriptInjector;
-import io.clickhandler.momentGwt.resources.MomentGwtBundle;
 import jsinterop.annotations.*;
+import moment.resources.MomentBundle;
 
 import java.util.Date;
 
@@ -12,8 +12,8 @@ public class Moment {
 
     @JsOverlay
     public static void injectJavascript() {
-        ScriptInjector.fromString(MomentGwtBundle.INSTANCE.momentWithLocales().getText()).setWindow(ScriptInjector.TOP_WINDOW).inject();
-        ScriptInjector.fromString(MomentGwtBundle.INSTANCE.momentTimezoneWithData().getText()).setWindow(ScriptInjector.TOP_WINDOW).inject();
+        ScriptInjector.fromString(MomentBundle.INSTANCE.momentWithLocales().getText()).setWindow(ScriptInjector.TOP_WINDOW).inject();
+        ScriptInjector.fromString(MomentBundle.INSTANCE.momentTimezoneWithData().getText()).setWindow(ScriptInjector.TOP_WINDOW).inject();
     }
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////
