@@ -570,7 +570,7 @@ public class Moment {
     // Supporting Classes
     ////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    @JsType
+    @JsType(isNative = true, namespace = JsPackage.GLOBAL, name = "Object")
     class Parts {
         @JsProperty
         public String year;
@@ -587,34 +587,76 @@ public class Moment {
         @JsProperty
         public String milliseconds;
 
-        @JsIgnore
-        public Parts(String year, String month, String day, String hour, String minute, String seconds, String milliseconds) {
+        @JsOverlay
+        public final Parts year(final String year) {
             this.year = year;
-            this.month = month;
-            this.day = day;
-            this.hour = hour;
-            this.minute = minute;
-            this.seconds = seconds;
-            this.milliseconds = milliseconds;
+            return this;
         }
 
-        @JsIgnore
-        public Parts(String year, String month, String day) {
-            this.year = year;
+        @JsOverlay
+        public final Parts month(final String month) {
             this.month = month;
-            this.day = day;
+            return this;
         }
 
-        @JsIgnore
-        public Parts(String hour, String minute, String seconds, String milliseconds) {
-            this.hour = hour;
-            this.minute = minute;
-            this.seconds = seconds;
-            this.milliseconds = milliseconds;
+        @JsOverlay
+        public final Parts day(final String day) {
+            this.day = day;
+            return this;
         }
+
+        @JsOverlay
+        public final Parts hour(final String hour) {
+            this.hour = hour;
+            return this;
+        }
+
+        @JsOverlay
+        public final Parts minute(final String minute) {
+            this.minute = minute;
+            return this;
+        }
+
+        @JsOverlay
+        public final Parts seconds(final String seconds) {
+            this.seconds = seconds;
+            return this;
+        }
+
+        @JsOverlay
+        public final Parts milliseconds(final String milliseconds) {
+            this.milliseconds = milliseconds;
+            return this;
+        }
+
+//        @JsIgnore
+//        public Parts(String year, String month, String day, String hour, String minute, String seconds, String milliseconds) {
+//            this.year = year;
+//            this.month = month;
+//            this.day = day;
+//            this.hour = hour;
+//            this.minute = minute;
+//            this.seconds = seconds;
+//            this.milliseconds = milliseconds;
+//        }
+//
+//        @JsIgnore
+//        public Parts(String year, String month, String day) {
+//            this.year = year;
+//            this.month = month;
+//            this.day = day;
+//        }
+//
+//        @JsIgnore
+//        public Parts(String hour, String minute, String seconds, String milliseconds) {
+//            this.hour = hour;
+//            this.minute = minute;
+//            this.seconds = seconds;
+//            this.milliseconds = milliseconds;
+//        }
     }
 
-    @JsType
+    @JsType(isNative = true, namespace = JsPackage.GLOBAL, name = "Object")
     public class CreationData {
         @JsProperty
         public String input;
@@ -626,11 +668,41 @@ public class Moment {
         public boolean isUTC;
         @JsProperty
         public boolean strict;
+
+        @JsOverlay
+        public final CreationData input(final String input) {
+            this.input = input;
+            return this;
+        }
+
+        @JsOverlay
+        public final CreationData format(final String format) {
+            this.format = format;
+            return this;
+        }
+
+        @JsOverlay
+        public final CreationData locale(final Object locale) {
+            this.locale = locale;
+            return this;
+        }
+
+        @JsOverlay
+        public final CreationData isUTC(final boolean isUTC) {
+            this.isUTC = isUTC;
+            return this;
+        }
+
+        @JsOverlay
+        public final CreationData strict(final boolean strict) {
+            this.strict = strict;
+            return this;
+        }
     }
 
 
     // part of Locale. called Calendar in javascript so keeping that naming here, related to locale
-    @JsType
+    @JsType(isNative = true, namespace = JsPackage.GLOBAL, name = "Object")
     class Calendar {
         @JsProperty
         public String lastday;
@@ -645,14 +717,40 @@ public class Moment {
         @JsProperty
         public String sameElse; // same else is used when more than a week away, future or past
 
-        @JsIgnore
-        public Calendar(String lastday, String sameDay, String nextDay, String lastWeek, String nextWeek, String sameElse) {
+        @JsOverlay
+        public final Calendar lastday(final String lastday) {
             this.lastday = lastday;
+            return this;
+        }
+
+        @JsOverlay
+        public final Calendar sameDay(final String sameDay) {
             this.sameDay = sameDay;
+            return this;
+        }
+
+        @JsOverlay
+        public final Calendar nextDay(final String nextDay) {
             this.nextDay = nextDay;
+            return this;
+        }
+
+        @JsOverlay
+        public final Calendar lastWeek(final String lastWeek) {
             this.lastWeek = lastWeek;
+            return this;
+        }
+
+        @JsOverlay
+        public final Calendar nextWeek(final String nextWeek) {
             this.nextWeek = nextWeek;
+            return this;
+        }
+
+        @JsOverlay
+        public final Calendar sameElse(final String sameElse) {
             this.sameElse = sameElse;
+            return this;
         }
     }
 }
