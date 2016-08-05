@@ -571,7 +571,7 @@ public class Moment {
     ////////////////////////////////////////////////////////////////////////////////////////////////////
 
     @JsType(isNative = true, namespace = JsPackage.GLOBAL, name = "Object")
-    class Parts {
+    public static class Parts {
         @JsProperty
         public String year;
         @JsProperty
@@ -657,7 +657,7 @@ public class Moment {
     }
 
     @JsType(isNative = true, namespace = JsPackage.GLOBAL, name = "Object")
-    public class CreationData {
+    public static class CreationData {
         @JsProperty
         public String input;
         @JsProperty
@@ -701,9 +701,11 @@ public class Moment {
     }
 
 
-    // part of Locale. called Calendar in javascript so keeping that naming here, related to locale
+    /**
+     *
+     */ // part of Locale. called Calendar in javascript so keeping that naming here, related to locale
     @JsType(isNative = true, namespace = JsPackage.GLOBAL, name = "Object")
-    class Calendar {
+    public static class Calendar {
         @JsProperty
         public String lastday;
         @JsProperty
