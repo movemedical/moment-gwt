@@ -504,10 +504,10 @@ public class Moment {
     // set to specific time zone
     public native Moment tz(String timeZone);
 
-    // the rest create moment with a time zone
-    @JsMethod(namespace = "moment")
-    public static native Moment tz();
+    // get current tz string
+    public native String tz();
 
+    // the rest create moment with a time zone
     @JsMethod(namespace = "moment")
     public static native Moment tz(String value, String timeZone);
 
