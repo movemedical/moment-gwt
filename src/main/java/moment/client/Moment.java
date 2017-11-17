@@ -260,25 +260,25 @@ public class Moment {
     public native Moment calendar(Moment moment);
     public native Moment calendar(Moment moment, Calendar formats);
 
-    public native Moment diff(Moment moment);
-    public native Moment diff(Moment moment, String key);
-    public native Moment diff(Moment moment, boolean noSuffix);
+    public native double diff(Moment moment);
+    public native double diff(Moment moment, String key);
+    public native double diff(Moment moment, boolean noSuffix);
 
-    public native Moment diff(String value);
-    public native Moment diff(String value, String key);
-    public native Moment diff(String value, boolean noSuffix);
+    public native double diff(String value);
+    public native double diff(String value, String key);
+    public native double diff(String value, boolean noSuffix);
 
-    public native Moment diff(int value);
-    public native Moment diff(int value, String key);
-    public native Moment diff(int value, boolean noSuffix);
+    public native double diff(int value);
+    public native double diff(int value, String key);
+    public native double diff(int value, boolean noSuffix);
 
-    public native Moment diff(Date value);
-    public native Moment diff(Date value, String key);
-    public native Moment diff(Date value, String key, boolean noSuffix);
+    public native double diff(Date value);
+    public native double diff(Date value, String key);
+    public native double diff(Date value, String key, boolean noSuffix);
 
-    public native Moment diff(int[] values);
-    public native Moment diff(int[] values, String key);
-    public native Moment diff(int[] values, String key, boolean noSuffix);
+    public native double diff(int[] values);
+    public native double diff(int[] values, String key);
+    public native double diff(int[] values, String key, boolean noSuffix);
 
     public native double valueOf();
 
